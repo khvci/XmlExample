@@ -17,11 +17,11 @@
                 string firstName, string lastName,
                 string userName, string email)
         {
-            Id = new Random().Next().ToString();
-            FirstName = firstName;
-            LastName = lastName;
-            UserName = userName;
-            Email = email;
+            this.Id = new Random().Next().ToString();
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.UserName = userName;
+            this.Email = email;
         }
 
         public User() { } 
