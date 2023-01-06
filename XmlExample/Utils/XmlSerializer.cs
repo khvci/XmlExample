@@ -9,20 +9,16 @@ namespace XmlExample.Utils
         {
             var serializer = new XmlSerializer(typeof(List<User>));
 
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                serializer.Serialize(stream, users.ToList());
-            }
+            using var stream = new FileStream(filePath, FileMode.Create);
+            serializer.Serialize(stream, users.ToList());
         }
 
         public static IEnumerable<User> Deserialize(string filePath)
         {
             var serializer = new XmlSerializer(typeof(List<User>));
 
-            using (var stream = new FileStream(filePath, FileMode.Open))
-            {
-                return (List<User>)serializer.Deserialize(stream);
-            }
+            using var stream = new FileStream(filePath, FileMode.Open);
+            return (List<User>)serializer.Deserialize(stream);
         }
     }
 }
