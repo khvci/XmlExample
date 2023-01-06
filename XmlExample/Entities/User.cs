@@ -1,6 +1,4 @@
-﻿using System.Xml.Serialization;
-
-namespace XmlExample.Entities
+﻿namespace XmlExample.Entities
 {
     public class User
     {
