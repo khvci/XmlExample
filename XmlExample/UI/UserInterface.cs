@@ -5,6 +5,10 @@ namespace XmlExample.UserInterface
 {
     static class UserInterface
     {
+        /// <summary>
+        /// promprts a list to user, then calls another method that
+        /// runs a command depending on user's choice.
+        /// </summary>
         public static void GetUserSelection()
         {
             Console.WriteLine("\n1 - Yeni kullanici girisi\n" +
@@ -14,6 +18,10 @@ namespace XmlExample.UserInterface
             RunUserCommand(short.Parse(Console.ReadLine()));
         }
 
+        /// <summary>
+        /// According to user's selection, calls related methods.
+        /// </summary>
+        /// <param name="selection">this parameter comes from GetUserSelection()</param>
         public static void RunUserCommand(short selection)
         {
             switch (selection)

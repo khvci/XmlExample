@@ -10,6 +10,9 @@ namespace XmlExample.Utils
         static string _userName;
         static string _email;
 
+        /// <summary>
+        /// Writes necessary information to get from user, and assigns responses to fields.
+        /// </summary>
         public static void ReadInputUser()
         {
             Console.WriteLine("\nisim: ");
